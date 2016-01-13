@@ -55,6 +55,7 @@
 
       nodel.html(content)
         .style({ opacity: 1, 'pointer-events': 'all' })
+        .classed("showing", true)
 
       while(i--) nodel.classed(directions[i], false)
       coords = direction_callbacks.get(dir).apply(this)
@@ -71,7 +72,8 @@
     // Returns a tip
     tip.hide = function() {
       var nodel = getNodeEl()
-      nodel.style({ opacity: 0, 'pointer-events': 'none' })
+      nodel.style({ opacity: 0, 'pointer-events': 'none' }).classed("showing", false)
+
       return tip
     }
 
