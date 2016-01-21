@@ -32,10 +32,9 @@
         target    = null
 
     function tip(vis) {
-      node = initNode();
       svg = getSVGNode(vis)
       point = svg.createSVGPoint()
-      document.body.appendChild(node)
+      document.body.appendChild(getNodeEl().node())
     }
 
     // Public - show the tooltip on the screen
