@@ -152,6 +152,10 @@
     //
     // Returns a tip
     tip.destroy = function() {
+      svg    = null;
+      point  = null;
+      target = null;
+
       if(node) {
         getNodeEl().remove();
         node = null;
