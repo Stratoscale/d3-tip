@@ -26,12 +26,13 @@
     var direction = d3_tip_direction,
         offset    = d3_tip_offset,
         html      = d3_tip_html,
-        node      = initNode(),
+        node      = null,
         svg       = null,
         point     = null,
         target    = null
 
     function tip(vis) {
+      node = initNode();
       svg = getSVGNode(vis)
       point = svg.createSVGPoint()
       document.body.appendChild(node)
